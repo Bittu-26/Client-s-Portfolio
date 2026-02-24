@@ -143,6 +143,96 @@ section {
   margin: 0 auto 30px;
   color: var(--gray);
 }
+/* EDUCATION */
+.education-section {
+  background: var(--light-gray);
+  text-align: center;
+}
+
+.education-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.4rem;
+}
+
+.education-card {
+  background: var(--white);
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.education-card span {
+  display: block;
+  margin-top: 8px;
+  color: var(--sage);
+  font-weight: 500;
+}
+
+/* CERTIFICATIONS */
+.certification-section {
+  background: var(--white);
+  text-align: center;
+}
+
+.certification-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.cert-card {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.cert-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cert-card h3 {
+  margin: 20px 10px 10px;
+}
+
+.cert-description {
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+.cert-description p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  padding-bottom: 15px;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 260px;
+  }
+}
 
 /* ================= CONTACT CTA ================= */
 
