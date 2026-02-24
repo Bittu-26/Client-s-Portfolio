@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import profileImg from "../assets/profile.jpg";
+
+<img src={profileImg} alt="Muskan Rawat" />
 
 export default function Home() {
   return (
