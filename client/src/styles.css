@@ -160,31 +160,59 @@ section {
   color: var(--gray);
   margin-bottom: 25px;
 }
+/* ================= PROJECTS SECTION ================= */
 
-/* ================= PROJECTS (Optional Shared) ================= */
-
-.projects {
+.projects-section {
+  padding: 100px 10%;
   background: var(--light-gray);
   text-align: center;
 }
 
+.projects-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-.card {
-  background: var(--white);
-  padding: 25px;
+.project-card {
+  background: white;
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  cursor: pointer;
   transition: 0.3s ease;
+  padding-bottom: 20px;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 20px 0 10px;
+}
+
+.project-description {
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.project-description p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  padding-bottom: 15px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 /* ================= CONTACT PAGE ================= */
