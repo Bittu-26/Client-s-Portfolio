@@ -1,17 +1,19 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import profileImg from "../assets/profile.jpg";
+import cert3D from "../assets/certificates/3dprinting.jpg";
+import certJava from "../assets/certificates/java.jpg";
 
 const certificates = [
   {
     title: "Product Engineering using 3D Printing & FEA",
-    image: "/certificates/3dprinting.jpg",
+    image: cert3D,
     description:
       "Focused on additive manufacturing, 3D printing processes, and Finite Element Analysis using ANSYS for structural validation and design optimization."
   },
   {
     title: "Java Object Oriented Programming",
-    image: "/certificates/java.jpg",
+    image: certJava,
     description:
       "Comprehensive training in Object-Oriented Programming concepts including inheritance, abstraction, polymorphism, and encapsulation using Java."
   }
@@ -19,9 +21,32 @@ const certificates = [
 
 export default function Home() {
   const [hoveredCert, setHoveredCert] = useState(null);
+  const [selectedCert, setSelectedCert] = useState(null);
+  const [theme, setTheme] = useState("light");
+
+  /* ================= SYSTEM THEME DEFAULT ================= */
+  useEffect(() => {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(prefersDark ? "dark" : "light");
+  }, []);
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <>
+      {/* ================= THEME TOGGLE ================= */}
+      <div className="theme-toggle">
+        <button onClick={toggleTheme}>
+          {theme === "dark" ? "☀ Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </div>
+
       {/* ================= ABOUT SECTION ================= */}
       <section className="about-section">
         <motion.div
@@ -30,7 +55,6 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          {/* TEXT */}
           <motion.div
             className="about-text"
             initial={{ x: -80, opacity: 0 }}
@@ -48,18 +72,15 @@ export default function Home() {
 
             <p>
               I have hands-on experience working on aircraft design projects,
-              strengthening my analytical thinking, teamwork, and leadership
-              abilities.
+              strengthening my analytical thinking, teamwork, and leadership abilities.
             </p>
 
             <p>
               My internship in 3D Printing and FEA enhanced my expertise in
-              ANSYS Workbench, Creo, and structural validation of engineering
-              components.
+              ANSYS Workbench, Creo, and structural validation.
             </p>
           </motion.div>
 
-          {/* IMAGE */}
           <motion.div
             className="about-image"
             initial={{ x: 80, opacity: 0 }}
@@ -113,6 +134,7 @@ export default function Home() {
               className="cert-card"
               onMouseEnter={() => setHoveredCert(index)}
               onMouseLeave={() => setHoveredCert(null)}
+              onClick={() => setSelectedCert(cert.image)}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -122,12 +144,10 @@ export default function Home() {
 
               <motion.div
                 className="cert-description"
-                initial={{ height: 0, opacity: 0 }}
-                animate={
-                  hoveredCert === index
-                    ? { height: "auto", opacity: 1 }
-                    : { height: 0, opacity: 0 }
-                }
+                animate={{
+                  opacity: hoveredCert === index ? 1 : 0,
+                  y: hoveredCert === index ? 0 : -10
+                }}
                 transition={{ duration: 0.3 }}
               >
                 <p>{cert.description}</p>
@@ -148,8 +168,7 @@ export default function Home() {
           <h2>Let's Build Something Together</h2>
 
           <p>
-            Have an opportunity or collaboration idea? I'm open to meaningful
-            technical discussions.
+            Have an opportunity or collaboration idea? I'm open to meaningful technical discussions.
           </p>
 
           <a href="/contact" className="btn">
@@ -157,6 +176,13 @@ export default function Home() {
           </a>
         </motion.div>
       </section>
+
+      {/* ================= MODAL PREVIEW ================= */}
+      {selectedCert && (
+        <div className="modal" onClick={() => setSelectedCert(null)}>
+          <img src={selectedCert} alt="Certificate Preview" />
+        </div>
+      )}
     </>
   );
 }
