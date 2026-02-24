@@ -1,0 +1,66 @@
+:root {
+  --cream: #F5F1E9;
+  --sand: #D8CFC4;
+  --charcoal: #2E2E2E;
+  --sage: #7A9E7E;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: var(--sand);
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--charcoal);
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.projects {
+  padding: 50px 10%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+button {
+  background: var(--sage);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
