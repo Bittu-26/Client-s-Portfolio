@@ -1,23 +1,24 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import profileImg from "../assets/profile.jpg";
-import cert3D from "../assets/certificates/3dprinting.jpg";
-import certJava from "../assets/certificates/java.jpg";
+import cert3D from "../assets/certificates/communication.jpg";
+import certJava from "../assets/certificates/reading.jpg";
 
 const certificates = [
   {
-    title: "Product Engineering using 3D Printing & FEA",
-    image: cert3D,
+    title: "Hone Your Communication Skills for Successful Career",
+    image: "/certificates/communication.jpg",
     description:
-      "Focused on additive manufacturing, 3D printing processes, and Finite Element Analysis using ANSYS for structural validation and design optimization."
+      "Awarded Certificate of Merit by the Centre for Professional Enhancement, Lovely Professional University, for successful completion of the communication skills development program with Grade A (01 Sept 2023 – 08 Oct 2023)."
   },
   {
-    title: "Java Object Oriented Programming",
-    image: certJava,
+    title: "The Reading Crew – Reading Comprehension Mastery",
+    image: "/certificates/reading.jpg",
     description:
-      "Comprehensive training in Object-Oriented Programming concepts including inheritance, abstraction, polymorphism, and encapsulation using Java."
+      "Certificate of Merit issued by the Centre for Professional Enhancement, Lovely Professional University, for completing the Reading Comprehension Mastery program (04 Feb 2024 – 14 Apr 2024)."
   }
 ];
+
 
 export default function Home() {
   const [hoveredCert, setHoveredCert] = useState(null);
@@ -105,7 +106,7 @@ export default function Home() {
 
           <div className="education-card">
             <h3>Lovely Professional University</h3>
-            <p>B.Tech in Computer Science & Engineering (2023–2027)</p>
+            <p>B.Tech in Aerospace Engineering (2023–2027)</p>
             <span>CGPA: 6.21</span>
           </div>
 
