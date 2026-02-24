@@ -1,32 +1,4 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
 
-const certificates = [
-  {
-    title: "Product Engineering using 3D Printing & FEA",
-    image: "/certificates/3dprinting.jpg",
-    description:
-      "Completed certification focused on additive manufacturing, finite element analysis, and AI-driven product engineering concepts."
-  },
-  {
-    title: "Java Object Oriented Programming",
-    image: "/certificates/java.jpg",
-    description:
-      "Strengthened understanding of OOP principles including inheritance, polymorphism, abstraction, and encapsulation using Java."
-  },
-  {
-    title: "Boeing National Aeromodelling Competition",
-    image: "/certificates/boeing.jpg",
-    description:
-      "Participated in aeromodelling competition at IIT Kanpur demonstrating aircraft design and engineering fundamentals."
-  },
-  {
-    title: "Communication Skills for Career Success",
-    image: "/certificates/communication.jpg",
-    description:
-      "Developed professional communication, presentation, and leadership skills for career advancement."
-  }
-];
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
 
