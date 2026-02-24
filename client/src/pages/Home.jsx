@@ -54,6 +54,69 @@ I have hands-on experience working on team-based projects, including aircraft de
           </motion.div>
         </motion.div>
       </section>
+      {/* ================= EDUCATION ================= */}
+      <section className="education-section">
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
+          <h2>Education</h2>
+          <div className="education-card">
+            <h3>Lovely Professional University</h3>
+            <p>B.Tech in Computer Science & Engineering (2023–2027)</p>
+            <span>CGPA: 6.21</span>
+          </div>
+
+          <div className="education-card">
+            <h3>C.J.M Hampton Court</h3>
+            <p>12th – Science (2022–2023)</p>
+            <span>78.40%</span>
+          </div>
+
+          <div className="education-card">
+            <h3>C.J.M Hampton Court</h3>
+            <p>10th – Science (2020–2021)</p>
+            <span>78%</span>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ================= CERTIFICATIONS ================= */}
+      <section className="certification-section">
+        <h2>Certifications</h2>
+
+        <div className="cert-grid">
+          {certificates.map((cert, index) => (
+            <motion.div
+              key={index}
+              className="cert-card"
+              onMouseEnter={() => setHoveredCert(index)}
+              onMouseLeave={() => setHoveredCert(null)}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <img src={cert.image} alt={cert.title} />
+              <h3>{cert.title}</h3>
+
+              <motion.div
+                className="cert-description"
+                initial={{ height: 0, opacity: 0 }}
+                animate={
+                  hoveredCert === index
+                    ? { height: "auto", opacity: 1 }
+                    : { height: 0, opacity: 0 }
+                }
+                transition={{ duration: 0.4 }}
+              >
+                <p>{cert.description}</p>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
       {/* ================= EXPLORE SECTION ================= */}
       <section className="explore-section">
