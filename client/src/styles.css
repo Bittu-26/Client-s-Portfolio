@@ -1,6 +1,4 @@
-/* =========================
-   ROOT VARIABLES
-========================= */
+/* ================= ROOT ================= */
 
 :root {
   --cream: #F5F1E9;
@@ -13,9 +11,7 @@
   --light-gray: #f9f9f9;
 }
 
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ================= GLOBAL RESET ================= */
 
 * {
   margin: 0;
@@ -28,21 +24,13 @@ body {
   background: var(--cream);
   color: var(--charcoal);
   line-height: 1.6;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 section {
-  padding: 80px 10%;
+  padding: 100px 10%;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ================= NAVBAR ================= */
 
 .nav {
   display: flex;
@@ -55,57 +43,27 @@ section {
   z-index: 1000;
 }
 
-.nav h2 {
-  font-weight: 600;
-}
-
 .nav a {
   margin-left: 25px;
-  font-weight: 500;
-  transition: 0.3s ease;
+  text-decoration: none;
+  color: var(--charcoal);
+  transition: 0.3s;
 }
 
 .nav a:hover {
   color: var(--sage);
 }
 
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero {
-  height: 100vh;
-  background: linear-gradient(135deg, var(--cream), var(--sand));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 700px;
-}
-
-.hero h1 {
-  font-size: 3.2rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--gray);
-  margin-bottom: 30px;
-}
-
-/* BUTTON */
+/* ================= BUTTONS ================= */
 
 .btn {
   background: var(--sage);
   color: var(--white);
-  padding: 12px 30px;
+  padding: 12px 28px;
   border-radius: 8px;
-  display: inline-block;
+  text-decoration: none;
   font-weight: 500;
+  display: inline-block;
   transition: 0.3s ease;
 }
 
@@ -114,60 +72,100 @@ section {
   transform: translateY(-3px);
 }
 
-/* =========================
-   ABOUT SECTION
-========================= */
+.btn-outline {
+  border: 2px solid var(--sage);
+  color: var(--sage);
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
 
-.about {
+.btn-outline:hover {
+  background: var(--sage);
+  color: white;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
   background: var(--white);
+}
+
+.about-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
 }
 
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: var(--gray);
+}
+
+.about-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
 .about-image img {
-  width: 350px;
+  width: 360px;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-.about-content {
-  max-width: 600px;
+/* ================= EXPLORE SECTION ================= */
+
+.explore-section {
+  background: linear-gradient(135deg, var(--cream), var(--sand));
+  text-align: center;
 }
 
-.about-content h2 {
-  font-size: 2.3rem;
+.explore-section h2 {
+  font-size: 2.4rem;
   margin-bottom: 20px;
 }
 
-.about-content p {
+.explore-section p {
+  max-width: 600px;
+  margin: 0 auto 30px;
   color: var(--gray);
+}
+
+/* ================= CONTACT CTA ================= */
+
+.contact-cta {
+  background: var(--white);
+  text-align: center;
+}
+
+.contact-cta h2 {
+  font-size: 2.3rem;
   margin-bottom: 15px;
 }
 
-.about-highlights {
-  display: flex;
-  gap: 40px;
-  margin-top: 20px;
+.contact-cta p {
+  color: var(--gray);
+  margin-bottom: 25px;
 }
 
-.about-highlights h4 {
-  color: var(--sage);
-  margin-bottom: 5px;
-}
-
-/* =========================
-   PROJECTS SECTION
-========================= */
+/* ================= PROJECTS (Optional Shared) ================= */
 
 .projects {
   background: var(--light-gray);
-}
-
-.projects h2 {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.3rem;
 }
 
 .project-grid {
@@ -184,31 +182,12 @@ section {
   transition: 0.3s ease;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: var(--gray);
-}
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-/* =========================
-   CONTACT SECTION
-========================= */
-
-.contact {
-  background: var(--white);
-  text-align: center;
-}
-
-.contact h2 {
-  margin-bottom: 30px;
-}
+/* ================= CONTACT PAGE ================= */
 
 .contact form {
   max-width: 500px;
@@ -221,16 +200,9 @@ section {
 .contact input,
 .contact textarea {
   padding: 12px;
-  border: 1px solid #ddd;
   border-radius: 8px;
+  border: 1px solid #ddd;
   font-family: inherit;
-  transition: 0.3s ease;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-  border-color: var(--sage);
-  outline: none;
 }
 
 .contact textarea {
@@ -240,38 +212,22 @@ section {
 
 button {
   background: var(--sage);
-  color: var(--white);
+  color: white;
   padding: 12px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s ease;
 }
 
 button:hover {
   background: var(--sage-dark);
-  transform: translateY(-3px);
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background: var(--sand);
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
-  .about {
-    flex-direction: column;
+  .about-container {
+    flex-direction: column-reverse;
     text-align: center;
   }
 
@@ -279,19 +235,14 @@ footer {
     width: 260px;
   }
 
-  .about-highlights {
-    flex-direction: column;
-    gap: 15px;
+  .about-buttons {
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
   section {
-    padding: 60px 6%;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
+    padding: 70px 6%;
   }
 
   .nav {
@@ -299,21 +250,9 @@ footer {
     gap: 10px;
   }
 
-  .nav a {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    height: 80vh;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
+  .about-text h2,
+  .explore-section h2,
+  .contact-cta h2 {
+    font-size: 2rem;
   }
 }
