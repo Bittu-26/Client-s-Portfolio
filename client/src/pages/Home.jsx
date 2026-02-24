@@ -7,13 +7,31 @@ const certificates = [
     title: "Hone Your Communication Skills for Successful Career",
     image: "/certificates/communication.jpg",
     description:
-      "Awarded Certificate of Merit by the Centre for Professional Enhancement, Lovely Professional University, for successful completion of the communication skills development program with Grade A (01 Sept 2023 – 08 Oct 2023)."
+      "Certificate of Merit issued by Centre for Professional Enhancement, Lovely Professional University (Sept–Oct 2023)."
   },
   {
     title: "The Reading Crew – Reading Comprehension Mastery",
     image: "/certificates/reading.jpg",
     description:
-      "Certificate of Merit issued by the Centre for Professional Enhancement, Lovely Professional University, for completing the Reading Comprehension Mastery program (04 Feb 2024 – 14 Apr 2024)."
+      "Certificate of Merit issued by Centre for Professional Enhancement, Lovely Professional University (Feb–Apr 2024)."
+  },
+  {
+    title: "Product Engineering using 3D Printing, FEA & AI",
+    image: "/certificates/product-engineering.jpg",
+    description:
+      "Certificate of Participation awarded by Human Resource Development Center, LPU for completing 120-hour program (June–July 2025) focused on 3D Printing, Finite Element Analysis and Artificial Intelligence."
+  },
+  {
+    title: "Boeing National Aeromodelling Competition – IIT Kanpur",
+    image: "/certificates/boeing-iit.jpg",
+    description:
+      "Participated in Boeing National Aeromodelling Festival conducted by IIT Kanpur (March 2025), demonstrating aircraft design and aeromodelling skills."
+  },
+  {
+    title: "Women in Engineering Workshop – Padmini VNA",
+    image: "/certificates/women-engineering.jpg",
+    description:
+      "Completed 2-day Women in Engineering Workshop (Feb 2026) at Padmini VNA Mechatronics, Gurugram focused on engineering innovation and industry exposure."
   }
 ];
 
