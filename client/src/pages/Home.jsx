@@ -49,10 +49,9 @@ export default function Home() {
         >
           <h2>About Me</h2>
           <p>
-            I am currently pursuing Computer Science and Engineering at
-            Lovely Professional University. My interests lie in
-            additive manufacturing, embedded systems, and software
-            development.
+            I am Muskan Rawat, a motivated engineering student with foundational knowledge in Aerospace Engineering gained through recent coursework and practical exposure. I have a strong interest in design and enjoy solving technical problems through analytical and creative approaches.
+I have hands-on experience working on team-based projects, including aircraft design activities, which strengthened my problem-solving abilities and collaborative skills. I am comfortable working in team environments and possess a natural leadership spirit that enables me to take initiative and contribute effectively to project success.
+With good communication skills and a passion for continuous learning, I am eager to apply my aerospace knowledge and design capabilities in a challenging and growth-oriented organization.
           </p>
           <p>
             During my internship in 3D Printing and FEA, I worked on
