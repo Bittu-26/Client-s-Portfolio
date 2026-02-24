@@ -1,13 +1,28 @@
-
 import { motion } from "framer-motion";
+import { useState } from "react";
 import profileImg from "../assets/profile.jpg";
 
-<img src={profileImg} alt="Muskan Rawat" />
+const certificates = [
+  {
+    title: "Product Engineering using 3D Printing & FEA",
+    image: "/certificates/3dprinting.jpg",
+    description:
+      "Focused on additive manufacturing, 3D printing processes, and Finite Element Analysis using ANSYS for structural validation and design optimization."
+  },
+  {
+    title: "Java Object Oriented Programming",
+    image: "/certificates/java.jpg",
+    description:
+      "Comprehensive training in Object-Oriented Programming concepts including inheritance, abstraction, polymorphism, and encapsulation using Java."
+  }
+];
 
 export default function Home() {
+  const [hoveredCert, setHoveredCert] = useState(null);
+
   return (
     <>
-      {/* ================= ABOUT SECTION (FIRST) ================= */}
+      {/* ================= ABOUT SECTION ================= */}
       <section className="about-section">
         <motion.div
           className="about-container"
@@ -15,6 +30,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
+          {/* TEXT */}
           <motion.div
             className="about-text"
             initial={{ x: -80, opacity: 0 }}
@@ -23,27 +39,27 @@ export default function Home() {
             transition={{ duration: 1 }}
           >
             <h2>About Me</h2>
+
             <p>
-              I am Muskan Rawat, a motivated engineering student with foundational knowledge in Aerospace Engineering gained through recent coursework and practical exposure. I have a strong interest in design and enjoy solving technical problems through analytical and creative approaches.
-I have hands-on experience working on team-based projects, including aircraft design activities, which strengthened my problem-solving abilities and collaborative skills. I am comfortable working in team environments and possess a natural leadership spirit that enables me to take initiative and contribute effectively to project success.
-</p><p>With good communication skills and a passion for continuous learning, I am eager to apply my aerospace knowledge and design capabilities in a challenging and growth-oriented organization.
-            </p>
-            <p>
-              My internship experience in 3D Printing and FEA strengthened my
-              skills in ANSYS Workbench, Creo, and structural validation of
-              engineering components.
+              I am Muskan Rawat, a motivated engineering student with
+              foundational knowledge in Aerospace Engineering gained through
+              coursework and practical exposure.
             </p>
 
-            <div className="about-buttons">
-              <a href="/projects" className="btn">
-                Explore My Work
-              </a>
-              <a href="/contact" className="btn-outline">
-                Contact Me
-              </a>
-            </div>
+            <p>
+              I have hands-on experience working on aircraft design projects,
+              strengthening my analytical thinking, teamwork, and leadership
+              abilities.
+            </p>
+
+            <p>
+              My internship in 3D Printing and FEA enhanced my expertise in
+              ANSYS Workbench, Creo, and structural validation of engineering
+              components.
+            </p>
           </motion.div>
 
+          {/* IMAGE */}
           <motion.div
             className="about-image"
             initial={{ x: 80, opacity: 0 }}
@@ -51,11 +67,12 @@ I have hands-on experience working on team-based projects, including aircraft de
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <img src="/profile.jpg" alt="Muskan Rawat" />
+            <img src={profileImg} alt="Muskan Rawat" />
           </motion.div>
         </motion.div>
       </section>
-      {/* ================= EDUCATION ================= */}
+
+      {/* ================= EDUCATION SECTION ================= */}
       <section className="education-section">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
@@ -64,6 +81,7 @@ I have hands-on experience working on team-based projects, including aircraft de
           transition={{ duration: 1 }}
         >
           <h2>Education</h2>
+
           <div className="education-card">
             <h3>Lovely Professional University</h3>
             <p>B.Tech in Computer Science & Engineering (2023–2027)</p>
@@ -72,19 +90,19 @@ I have hands-on experience working on team-based projects, including aircraft de
 
           <div className="education-card">
             <h3>C.J.M Hampton Court</h3>
-            <p>12th – Science (2022–2023)</p>
+            <p>12th – Science</p>
             <span>78.40%</span>
           </div>
 
           <div className="education-card">
             <h3>C.J.M Hampton Court</h3>
-            <p>10th – Science (2020–2021)</p>
+            <p>10th – Science</p>
             <span>78%</span>
           </div>
         </motion.div>
       </section>
 
-      {/* ================= CERTIFICATIONS ================= */}
+      {/* ================= CERTIFICATION SECTION ================= */}
       <section className="certification-section">
         <h2>Certifications</h2>
 
@@ -110,32 +128,13 @@ I have hands-on experience working on team-based projects, including aircraft de
                     ? { height: "auto", opacity: 1 }
                     : { height: 0, opacity: 0 }
                 }
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.3 }}
               >
                 <p>{cert.description}</p>
               </motion.div>
             </motion.div>
           ))}
         </div>
-      </section>
-
-      {/* ================= EXPLORE SECTION ================= */}
-      <section className="explore-section">
-        <motion.div
-          initial={{ y: 60, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <h2>Explore My Work</h2>
-          <p>
-            From software systems to embedded hardware projects, explore my
-            technical journey and innovations.
-          </p>
-          <a href="/projects" className="btn">
-            View Projects
-          </a>
-        </motion.div>
       </section>
 
       {/* ================= CONTACT CTA ================= */}
@@ -147,10 +146,12 @@ I have hands-on experience working on team-based projects, including aircraft de
           transition={{ duration: 1 }}
         >
           <h2>Let's Build Something Together</h2>
+
           <p>
-            Have an opportunity or collaboration idea? I'm always open to
-            meaningful technical discussions.
+            Have an opportunity or collaboration idea? I'm open to meaningful
+            technical discussions.
           </p>
+
           <a href="/contact" className="btn">
             Get In Touch
           </a>
