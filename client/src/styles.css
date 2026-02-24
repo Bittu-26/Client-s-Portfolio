@@ -1,5 +1,28 @@
 /* ================= ROOT ================= */
+/* ================= THEME VARIABLES ================= */
 
+:root {
+  --bg: #F5F1E9;
+  --card: #ffffff;
+  --text: #2E2E2E;
+  --accent: #7A9E7E;
+}
+
+body[data-theme="dark"] {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #f1f1f1;
+  --accent: #9ac89e;
+}
+
+/* ================= GLOBAL ================= */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
 :root {
   --cream: #F5F1E9;
   --sand: #D8CFC4;
@@ -10,10 +33,7 @@
   --gray: #666;
   --light-gray: #f9f9f9;
 }
-body[data-theme="dark"] {
-  background: #121212;
-  color: #f1f1f1;
-}
+
 /* ================= GLOBAL RESET ================= */
 
 * {
