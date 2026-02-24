@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import profileImg from "../assets/profile.jpg";
-import cert3D from "../assets/certificates/communication.jpg";
-import certJava from "../assets/certificates/reading.jpg";
 
 const certificates = [
   {
