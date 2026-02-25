@@ -26,67 +26,69 @@ export default function Projects() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className="projects-section">
-      <h2>My Projects</h2>
+    <>
+      {/* ================= PROJECT SKILLS ================= */}
+      <section className="project-skills">
+        <h2>Core Skill Areas</h2>
 
-      <div className="project-grid">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            className="project-card"
-            onMouseEnter={() => setHovered(index)}
-            onMouseLeave={() => setHovered(null)}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-          >
-            <img src={project.image} alt={project.title} />
+        <div className="project-skill-grid">
+          <div>
+            <h4>Programming</h4>
+            <p>Java, Python, C, SQL</p>
+          </div>
 
-            <h3>{project.title}</h3>
+          <div>
+            <h4>Engineering Tools</h4>
+            <p>ANSYS Workbench, Creo, FEA, 3D Printing</p>
+          </div>
 
+          <div>
+            <h4>Embedded Systems</h4>
+            <p>Arduino, Sensors, Circuit Design</p>
+          </div>
+
+          <div>
+            <h4>Soft Skills</h4>
+            <p>Leadership, Communication, Teamwork</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= PROJECTS SECTION ================= */}
+      <section className="projects-section">
+        <h2>My Projects</h2>
+
+        <div className="project-grid">
+          {projects.map((project, index) => (
             <motion.div
-              className="project-description"
-              initial={{ height: 0, opacity: 0 }}
-              animate={
-                hovered === index
-                  ? { height: "auto", opacity: 1 }
-                  : { height: 0, opacity: 0 }
-              }
-              transition={{ duration: 0.4 }}
+              key={index}
+              className="project-card"
+              onMouseEnter={() => setHovered(index)}
+              onMouseLeave={() => setHovered(null)}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <p>{project.description}</p>
+              <img src={project.image} alt={project.title} />
+
+              <h3>{project.title}</h3>
+
+              <motion.div
+                className="project-description"
+                initial={{ height: 0, opacity: 0 }}
+                animate={
+                  hovered === index
+                    ? { height: "auto", opacity: 1 }
+                    : { height: 0, opacity: 0 }
+                }
+                transition={{ duration: 0.4 }}
+              >
+                <p>{project.description}</p>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-     {/* ================= PROJECT SKILLS ================= */}
-<section className="project-skills">
-  <h2>Core Skill Areas</h2>
-
-  <div className="project-skill-grid">
-    <div>
-      <h4>Programming</h4>
-      <p>Java, Python, C, SQL</p>
-    </div>
-
-    <div>
-      <h4>Engineering Tools</h4>
-      <p>ANSYS Workbench, Creo, FEA, 3D Printing</p>
-    </div>
-
-    <div>
-      <h4>Embedded Systems</h4>
-      <p>Arduino, Sensors, Circuit Design</p>
-    </div>
-
-    <div>
-      <h4>Soft Skills</h4>
-      <p>Leadership, Communication, Teamwork</p>
-    </div>
-  </div>
-</section>
-
+          ))}
+        </div>
+      </section>
+    </>
   );
- 
 }
