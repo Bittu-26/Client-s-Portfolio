@@ -110,36 +110,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ================= EDUCATION SECTION ================= */}
-      <section className="education-section">
-        <motion.div
-          initial={{ y: 60, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <h2>Education</h2>
-
-          <div className="education-card">
-            <h3>Lovely Professional University</h3>
-            <p>B.Tech in Aerospace Engineering (2023–2027)</p>
-            <span>CGPA: 6.21</span>
-          </div>
-
-          <div className="education-card">
-            <h3>C.J.M Hampton Court</h3>
-            <p>12th – Science</p>
-            <span>78.40%</span>
-          </div>
-
-          <div className="education-card">
-            <h3>C.J.M Hampton Court</h3>
-            <p>10th – Science</p>
-            <span>78%</span>
-          </div>
-        </motion.div>
-      </section>
-
       {/* ================= CERTIFICATION SECTION ================= */}
       <section className="certification-section">
         <h2>Certifications</h2>
