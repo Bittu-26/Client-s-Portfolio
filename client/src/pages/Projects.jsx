@@ -60,5 +60,31 @@ export default function Projects() {
         ))}
       </div>
     </section>
+    {/* ================= PROJECT SKILLS ================= */}
+<section className="project-skills">
+  <h2>Core Skill Areas</h2>
+
+  <div className="project-skill-grid">
+    <div>
+      <h4>Programming</h4>
+      <p>Java, Python, C, SQL</p>
+    </div>
+
+    <div>
+      <h4>Engineering Tools</h4>
+      <p>ANSYS Workbench, Creo, FEA, 3D Printing</p>
+    </div>
+
+    <div>
+      <h4>Embedded Systems</h4>
+      <p>Arduino, Sensors, Circuit Design</p>
+    </div>
+
+    <div>
+      <h4>Soft Skills</h4>
+      <p>Leadership, Communication, Teamwork</p>
+    </div>
+  </div>
+</section>
   );
 }
