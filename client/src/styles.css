@@ -289,6 +289,26 @@ section {
 .project-description p {
   color: var(--muted);
 }
+/* ================= PROJECT SKILLS ================= */
+
+.project-skills {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-skill-grid div {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
 
 /* ================= CONTACT CTA ================= */
 
