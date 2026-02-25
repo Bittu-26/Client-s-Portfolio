@@ -60,7 +60,9 @@ export default function Projects() {
         ))}
       </div>
     </section>
-    {/* ================= PROJECT SKILLS ================= */}
+
+  );
+  {/* ================= PROJECT SKILLS ================= */}
 <section className="project-skills">
   <h2>Core Skill Areas</h2>
 
@@ -86,5 +88,4 @@ export default function Projects() {
     </div>
   </div>
 </section>
-  );
 }
