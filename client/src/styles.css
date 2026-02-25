@@ -211,7 +211,7 @@ section {
   font-size: 0.95rem;
   padding-bottom: 15px;
 }
-/* ================= SKILLS SECTION ================= */
+/* ================= HOME SKILLS SECTION ================= */
 
 .skills-section {
   background: var(--section-alt);
@@ -219,8 +219,8 @@ section {
 }
 
 .skills-section h2 {
+  font-size: 2.4rem;
   margin-bottom: 50px;
-  font-size: 2.3rem;
 }
 
 .skills-grid {
@@ -231,28 +231,36 @@ section {
 
 .skill-card {
   background: var(--card);
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
 }
 
 .skill-card h4 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .progress-bar {
   height: 10px;
-  background: #ddd;
-  border-radius: 20px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 30px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: var(--accent);
-  border-radius: 20px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+  border-radius: 30px;
+  transition: width 1s ease;
 }
-
 /* ================= PROJECTS ================= */
 
 .projects-section {
@@ -292,22 +300,43 @@ section {
 /* ================= PROJECT SKILLS ================= */
 
 .project-skills {
+  background: var(--card);
+  padding: 80px 10%;
   text-align: center;
-  margin-bottom: 60px;
+}
+
+.project-skills h2 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
 }
 
 .project-skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
-  margin-top: 30px;
 }
 
 .project-skill-grid div {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  background: var(--section-alt);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.project-skill-grid div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.project-skill-grid h4 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.project-skill-grid p {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 /* ================= CONTACT CTA ================= */
@@ -370,6 +399,12 @@ button:hover {
 
   .about-image img {
     width: 260px;
+  }
+}
+@media (max-width: 768px) {
+  .skills-section,
+  .project-skills {
+    padding: 70px 6%;
   }
 }
 
