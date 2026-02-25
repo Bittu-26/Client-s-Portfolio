@@ -211,6 +211,47 @@ section {
   font-size: 0.95rem;
   padding-bottom: 15px;
 }
+/* ================= SKILLS SECTION ================= */
+
+.skills-section {
+  background: var(--section-alt);
+  text-align: center;
+}
+
+.skills-section h2 {
+  margin-bottom: 50px;
+  font-size: 2.3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.skill-card h4 {
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 20px;
+}
 
 /* ================= PROJECTS ================= */
 
