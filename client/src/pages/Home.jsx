@@ -173,40 +173,32 @@ export default function Home() {
         </motion.div>
       </section>
 
-{/* ================= SKILLS SECTION ================= */}
-<section className="skills-section">
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8 }}
-  >
-    <h2>Technical Skills</h2>
+{/* ================= PROJECT SKILLS ================= */}
+      <section className="project-skills">
+        <h2>Core Skill Areas</h2>
 
-    <div className="skills-grid">
-      {[
-        { name: "ANSYS Workbench", level: 85 },
-        { name: "Creo / CAD Design", level: 80 },
-        { name: "Java", level: 75 },
-        { name: "Python", level: 70 },
-        { name: "Arduino / Embedded Systems", level: 75 },
-        { name: "Finite Element Analysis", level: 80 }
-      ].map((skill, index) => (
-        <div className="skill-card" key={index}>
-          <h4>{skill.name}</h4>
-          <div className="progress-bar">
-            <motion.div
-              className="progress-fill"
-              initial={{ width: 0 }}
-              whileInView={{ width: `${skill.level}%` }}
-              transition={{ duration: 1 }}
-            />
+        <div className="project-skill-grid">
+          <div>
+            <h4>Programming</h4>
+            <p>Java, Python, C, SQL</p>
+          </div>
+
+          <div>
+            <h4>Engineering Tools</h4>
+            <p>ANSYS Workbench, Creo, FEA, 3D Printing</p>
+          </div>
+
+          <div>
+            <h4>Embedded Systems</h4>
+            <p>Arduino, Sensors, Circuit Design</p>
+          </div>
+
+          <div>
+            <h4>Soft Skills</h4>
+            <p>Leadership, Communication, Teamwork</p>
           </div>
         </div>
-      ))}
-    </div>
-  </motion.div>
-</section>
+      </section>
       {/* ================= CONTACT CTA ================= */}
       <section className="contact-cta">
         <motion.div
